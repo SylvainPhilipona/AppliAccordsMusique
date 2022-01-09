@@ -1,0 +1,10 @@
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\bin\Release\AppliAccordsMusique.exe.config
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\bin\Release\AppliAccordsMusique.exe
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\bin\Release\AppliAccordsMusique.pdb
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.ChordsTrain.resources
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.Properties.Chords.resources
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.csproj.GenerateResource.cache
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.exe
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.pdb

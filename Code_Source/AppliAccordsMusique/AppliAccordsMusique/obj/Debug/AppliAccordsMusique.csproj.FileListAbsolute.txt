@@ -1,0 +1,13 @@
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\bin\Debug\AppliAccordsMusique.exe.config
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\bin\Debug\AppliAccordsMusique.exe
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\bin\Debug\AppliAccordsMusique.pdb
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Debug\AppliAccordsMusique.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Debug\AppliAccordsMusique.ChordsTrain.resources
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Debug\AppliAccordsMusique.csproj.GenerateResource.cache
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Debug\AppliAccordsMusique.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Debug\AppliAccordsMusique.exe
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Debug\AppliAccordsMusique.pdb
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\bin\Debug\Newtonsoft.Json.dll
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\bin\Debug\Newtonsoft.Json.xml
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Debug\AppliAccordsMusique.csproj.CopyComplete
+C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Debug\AppliAccordsMusique.NewChordList.resources
