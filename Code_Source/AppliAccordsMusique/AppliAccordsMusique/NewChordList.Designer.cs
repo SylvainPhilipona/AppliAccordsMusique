@@ -33,6 +33,7 @@ namespace AppliAccordsMusique
             this.btnAddChord = new System.Windows.Forms.Button();
             this.btnValidate = new System.Windows.Forms.Button();
             this.tbListName = new System.Windows.Forms.TextBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panContainer
@@ -73,11 +74,22 @@ namespace AppliAccordsMusique
             this.tbListName.TabIndex = 2;
             this.tbListName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(17, 11);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(239, 24);
+            this.lblTitle.TabIndex = 3;
+            this.lblTitle.Text = "Titre de la liste";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // NewChordList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(269, 465);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.tbListName);
             this.Controls.Add(this.btnValidate);
             this.Controls.Add(this.btnAddChord);
@@ -98,5 +110,6 @@ namespace AppliAccordsMusique
         private System.Windows.Forms.Button btnAddChord;
         private System.Windows.Forms.Button btnValidate;
         private System.Windows.Forms.TextBox tbListName;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

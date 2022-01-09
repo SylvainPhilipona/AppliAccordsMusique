@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppliAccordsMusique
@@ -99,6 +94,7 @@ namespace AppliAccordsMusique
 
         private TextBox NewChordInput(int yPos)
         {
+            //Create a textbox and set this propreties
             TextBox inputChord = new TextBox();
             inputChord.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             inputChord.Location = new Point(12, yPos);

@@ -39,18 +39,8 @@ namespace AppliAccordsMusique
             //Select a default timer
             cboTimer.SelectedItem = $"{DEFAULT_TICK_SPEED} sec";
 
-            //Add a chord
-            //AddChords("test", new List<string> { "qwd", "ewf"});
-
-            //Go trough all chords
-            foreach (Chord chord in ChordsJSON.GetChords())
-            {
-                //Add the chords in the dictionnary
-                chords.Add(chord.title, chord.chords);
-
-                //Add the chord in the combobox
-                cboChords.Items.Add(chord.title);
-            }
+            //Get and display all chords
+            GetAndDisplayChords();
 
             //Set the default chords selected
             cboChords.SelectedIndex = 0;
@@ -85,6 +75,24 @@ namespace AppliAccordsMusique
             }
         }
 
+        private void GetAndDisplayChords()
+        {
+            //Reset
+            chords = new Dictionary<string, List<string>>();
+            cboChords.Items.Clear();
+            cboChords.ResetText();
+
+            //Go trough all chords
+            foreach (Chord chord in ChordsJSON.GetChords())
+            {
+                //Add the chords in the dictionnary
+                chords.Add(chord.title, chord.chords);
+
+                //Add the chord in the combobox
+                cboChords.Items.Add(chord.title);
+            }
+        }
+
         private void Timer_Tick(object sender, EventArgs e)
         {
             //Generate a random chord
@@ -113,6 +121,8 @@ namespace AppliAccordsMusique
         {
             NewChordList newChordList = new NewChordList();
             newChordList.ShowDialog();
+            GetAndDisplayChords();
+            cboChords.SelectedIndex = cboChords.Items.Count - 1;
         }
     }
 }
