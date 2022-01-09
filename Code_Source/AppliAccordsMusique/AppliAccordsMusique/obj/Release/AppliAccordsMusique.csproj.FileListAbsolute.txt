@@ -8,3 +8,16 @@ C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Release\App
 C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.csproj.CoreCompileInputs.cache
 C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.exe
 C:\Users\HP\source\repos\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.pdb
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\bin\Release\AppliAccordsMusique.exe.config
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\bin\Release\AppliAccordsMusique.exe
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\bin\Release\AppliAccordsMusique.pdb
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\bin\Release\Newtonsoft.Json.dll
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\bin\Release\Newtonsoft.Json.xml
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.csprojAssemblyReference.cache
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.ChordsTrain.resources
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.NewChordList.resources
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.csproj.GenerateResource.cache
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.csproj.CoreCompileInputs.cache
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.csproj.CopyComplete
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.exe
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\obj\Release\AppliAccordsMusique.pdb

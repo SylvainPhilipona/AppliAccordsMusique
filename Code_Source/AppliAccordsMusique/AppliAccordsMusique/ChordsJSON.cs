@@ -20,18 +20,32 @@ namespace AppliAccordsMusique
 
         private static List<Chord> defaultChords = new List<Chord>()
         {
-            new Chord("list1", new List<string> { "C", "C+", "CM" }),
-            new Chord("list2", new List<string> { "C dim", "C sus", "C4" }),
-            new Chord("list3", new List<string> { "C6", "Cma7", "Cm7" }),
-            new Chord("list4", new List<string> { "C7", "Cm", "C5" }),
+            new Chord("Majeur", new List<string> { "C", "D", "E", "F", "G", "A", "B", "C#", "D#", "E#", "F#", "G#", "A#", "B#" }),
+            new Chord("Mineur", new List<string> { "Cm", "Dm", "Em", "Fm", "Gm", "Am", "Bm", "C#m", "D#m", "E#m", "F#m", "G#m", "A#m", "B#m" }),
         };
 
         //Functions
 
         public static List<Chord> GetChords()
         {
+            //Create the JSON file if it's dont exists
+            CreateFileIfNotExists();
+
             //Return the JSON content as a list of chords
             return JsonConvert.DeserializeObject<List<Chord>>(File.ReadAllText(JsonFileFullname));
+        }
+
+        private static void CreateFileIfNotExists()
+        {
+            //Check if file dosen't exists, or is empty
+            if (!File.Exists(JsonFileFullname) || File.ReadAllText(JsonFileFullname) == "")
+            {
+                //Convert the string to JSON
+                var defaultsChordsJSON = JsonConvert.SerializeObject(defaultChords, Formatting.Indented);
+
+                //Write in the file
+                File.WriteAllText(JsonFileFullname, defaultsChordsJSON);
+            }
         }
 
         public static bool ChordsExists(string title)
@@ -50,15 +64,8 @@ namespace AppliAccordsMusique
 
         public static void AddChords(string title, List<string> chords)
         {
-            //Check if file dosen't exists, or is empty
-            if (!File.Exists(JsonFileFullname) || File.ReadAllText(JsonFileFullname) == "")
-            {
-                //Convert the string to JSON
-                var defaultsChordsJSON = JsonConvert.SerializeObject(defaultChords, Formatting.Indented);
-
-                //Write in the file
-                File.WriteAllText(JsonFileFullname, defaultsChordsJSON);
-            }
+            //Create the JSON file if it's dont exists
+            CreateFileIfNotExists();
 
             //Get actual json content
             List<Chord> list = JsonConvert.DeserializeObject<List<Chord>>(File.ReadAllText(JsonFileFullname));
