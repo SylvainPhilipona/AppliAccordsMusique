@@ -42,8 +42,16 @@ namespace AppliAccordsMusique
             //Get and display all chords
             GetAndDisplayChords();
 
-            //Set the default chords selected
-            cboChords.SelectedIndex = 0;
+            //If the combobox contains at least 1 item
+            if (cboChords.Items.Count > 0)
+            {
+                //Set the default chords selected
+                cboChords.SelectedIndex = 0;
+            }
+            else
+            {
+                btnStart.Enabled = false;
+            }
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -52,6 +60,8 @@ namespace AppliAccordsMusique
             {
                 isStarted = true;
                 btnStart.Text = "Stop";
+                btnNewList.Enabled = false;
+                btnDeleteList.Enabled = false;
                 cboChords.Enabled = false;
                 cboTimer.Enabled = false;
 
@@ -69,6 +79,8 @@ namespace AppliAccordsMusique
                 //Reset
                 isStarted = false;
                 btnStart.Text = "Start";
+                btnNewList.Enabled = true;
+                btnDeleteList.Enabled = true;
                 cboChords.Enabled = true;
                 cboTimer.Enabled = true;
                 timer.Stop();
@@ -95,14 +107,18 @@ namespace AppliAccordsMusique
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            //Generate a random chord
-            string rndCHord = selectedChords[new Random().Next(0, selectedChords.Count)];
+            //If the combobox contains at least 1 item
+            if (cboChords.Items.Count > 0)
+            {
+                //Generate a random chord
+                string rndCHord = selectedChords[new Random().Next(0, selectedChords.Count)];
 
-            //Set the font size
-            lblChord.Font = new Font("Consolas", (float)250/rndCHord.Length, FontStyle.Regular);
+                //Set the font size
+                lblChord.Font = new Font("Consolas", (float)250 / rndCHord.Length, FontStyle.Regular);
 
-            //Display the chord
-            lblChord.Text = rndCHord;
+                //Display the chord
+                lblChord.Text = rndCHord;
+            }
         }
 
         private void cboTimer_SelectedIndexChanged(object sender, EventArgs e)
@@ -113,8 +129,35 @@ namespace AppliAccordsMusique
 
         private void cboChords_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Set the chords selected
-            selectedChords = chords[cboChords.SelectedItem.ToString()];
+            //////If the combobox contains at least 1 item
+            ////if (cboChords.Items.Count > 0)
+            ////{
+            ////    //Set the chords selected
+            ////    selectedChords = chords[cboChords.SelectedItem.ToString()];
+
+            ////    //Enable the start button
+            ////    btnStart.Enabled = true;
+            ////}
+            ////else
+            ////{
+            ////    selectedChords = null;
+
+            ////    //Disable the start button
+            ////    btnStart.Enabled = false;
+            ////}
+        }
+
+        private void cboChords_TextChanged(object sender, EventArgs e)
+        {
+            //If the combobox contains at least 1 item
+            if (cboChords.Items.Count > 0)
+            {
+                //Set the chords selected
+                selectedChords = chords[cboChords.SelectedItem.ToString()];
+
+                //Enable the start button
+                btnStart.Enabled = true;
+            }
         }
 
         private void btnNewList_Click(object sender, EventArgs e)
@@ -123,6 +166,34 @@ namespace AppliAccordsMusique
             newChordList.ShowDialog();
             GetAndDisplayChords();
             cboChords.SelectedIndex = cboChords.Items.Count - 1;
+        }
+
+        private void btnDeleteList_Click(object sender, EventArgs e)
+        {
+            if(cboChords.Items.Count > 0)
+            {
+                string listToDelete = cboChords.SelectedItem.ToString();
+
+                //Display the confirm popup
+                DialogResult result = MessageBox.Show($"Voulez vraiment supprimer la liste {listToDelete} ?", $"Suppression de la liste {listToDelete}", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                //Validate the delete
+                if (result == DialogResult.Yes)
+                {
+                    //Delete the list
+                    ChordsJSON.RemoveChords(listToDelete);
+                    GetAndDisplayChords();
+
+                    //If the combobox don't contains at least 1 item
+                    if (cboChords.Items.Count <= 0)
+                    {
+                        selectedChords = null;
+
+                        //Disable the start button
+                        btnStart.Enabled = false;
+                    }
+                }
+            }
         }
     }
 }

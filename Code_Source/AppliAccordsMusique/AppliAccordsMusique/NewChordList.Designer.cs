@@ -71,7 +71,7 @@ namespace AppliAccordsMusique
             this.tbListName.MaxLength = 10;
             this.tbListName.Name = "tbListName";
             this.tbListName.Size = new System.Drawing.Size(245, 32);
-            this.tbListName.TabIndex = 2;
+            this.tbListName.TabIndex = 0;
             this.tbListName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblTitle

@@ -10,6 +10,7 @@ namespace AppliAccordsMusique
         //Constants
 
         private const int MAX_CHORD_INPUTS = 25;
+        private const int MIN_CHORDS_IN_LIST = 2;
 
         //Variables
 
@@ -54,6 +55,10 @@ namespace AppliAccordsMusique
                 if (ChordsJSON.ChordsExists(tbListName.Text))
                 {
                     MessageBox.Show($"Le nom de liste \"{tbListName.Text}\" existe déja. Veuillez en choisir un autre !");
+
+                    //Set the focus and select the text of the title input
+                    tbListName.Select();
+                    tbListName.SelectAll();
                 }
                 else
                 {
@@ -72,7 +77,7 @@ namespace AppliAccordsMusique
                     }
 
                     //Check if the list contains at least 1 chord
-                    if (chords.chords.Count > 0)
+                    if (chords.chords.Count >= MIN_CHORDS_IN_LIST)
                     {
                         //Add the chords list
                         ChordsJSON.AddChords(chords.title, chords.chords);
@@ -82,13 +87,19 @@ namespace AppliAccordsMusique
                     }
                     else
                     {
-                        MessageBox.Show("Vous devez ajouter au moins un accord à votre liste !");
+                        MessageBox.Show($"Vous devez ajouter au moins {MIN_CHORDS_IN_LIST} accords à votre liste !");
+
+                        //Set the focus on the add input button
+                        btnAddChord.Select();
                     }
                 }
             }
             else
             {
                 MessageBox.Show("Vous devez donner un nom à votre liste !");
+
+                //Set the focus on the title input
+                tbListName.Select();
             }
         }
 

@@ -79,6 +79,32 @@ namespace AppliAccordsMusique
             //Write in the file
             File.WriteAllText(JsonFileFullname, convertedJson);
         }
+
+        public static void RemoveChords(string title)
+        {
+            //Create the JSON file if it's dont exists
+            CreateFileIfNotExists();
+
+            //Get actual json content
+            List<Chord> list = JsonConvert.DeserializeObject<List<Chord>>(File.ReadAllText(JsonFileFullname));
+
+            //Go trough all the chords lists
+            foreach(Chord chord in list.ToList())
+            {
+                //If the chord is to remove
+                if(chord.title == title) 
+                {
+                    //Remove the chord
+                    list.Remove(chord);
+                }
+            }
+
+            //Convert the string to JSON
+            var convertedJson = JsonConvert.SerializeObject(list, Formatting.Indented);
+
+            //Write in the file
+            File.WriteAllText(JsonFileFullname, convertedJson);
+        }
     }
 
     public class Chord
