@@ -192,6 +192,10 @@ namespace AppliAccordsMusique
                         //Disable the start button
                         btnStart.Enabled = false;
                     }
+                    else
+                    {
+                        cboChords.SelectedIndex = 0;
+                    }
                 }
             }
         }
