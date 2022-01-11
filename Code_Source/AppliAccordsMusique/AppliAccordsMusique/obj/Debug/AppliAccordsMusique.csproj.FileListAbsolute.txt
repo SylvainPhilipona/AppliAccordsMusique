@@ -24,3 +24,7 @@ E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMu
 E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\obj\Debug\AppliAccordsMusique.csproj.CopyComplete
 E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\obj\Debug\AppliAccordsMusique.exe
 E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\obj\Debug\AppliAccordsMusique.pdb
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\bin\Debug\AppliAccordsMusique.exe.manifest
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\bin\Debug\AppliAccordsMusique.application
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\obj\Debug\AppliAccordsMusique.exe.manifest
+E:\Projets\C#\AppliAccordsMusique\Code_Source\AppliAccordsMusique\AppliAccordsMusique\obj\Debug\AppliAccordsMusique.application

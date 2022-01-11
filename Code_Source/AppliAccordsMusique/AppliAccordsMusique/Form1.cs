@@ -4,15 +4,13 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using Timer = System.Windows.Forms.Timer;
-using System.IO;
-using System.Linq;
 
 namespace AppliAccordsMusique
 {
     public partial class ChordsTrain : Form
     {
         //Constants
-        private int DEFAULT_TICK_SPEED = 1; //In seconds
+        private const int DEFAULT_TICK_SPEED = 1; //In seconds
 
         //Variables
         private Timer timer;
@@ -98,10 +96,10 @@ namespace AppliAccordsMusique
             foreach (Chord chord in ChordsJSON.GetChords())
             {
                 //Add the chords in the dictionnary
-                chords.Add(chord.title, chord.chords);
+                chords.Add(chord.Title, chord.Chords);
 
                 //Add the chord in the combobox
-                cboChords.Items.Add(chord.title);
+                cboChords.Items.Add(chord.Title);
             }
         }
 

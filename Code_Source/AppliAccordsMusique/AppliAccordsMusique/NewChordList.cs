@@ -41,7 +41,7 @@ namespace AppliAccordsMusique
             }
             else
             {
-                MessageBox.Show(nbInputs.ToString());
+                MessageBox.Show($"Le nombre max d'accord dans une liste est de {nbInputs} !");
             }
             
         }
@@ -72,15 +72,15 @@ namespace AppliAccordsMusique
                         if (inputChord.Text != "")
                         {
                             //Add the chord
-                            chords.chords.Add(inputChord.Text);
+                            chords.Chords.Add(inputChord.Text);
                         }
                     }
 
                     //Check if the list contains at least 1 chord
-                    if (chords.chords.Count >= MIN_CHORDS_IN_LIST)
+                    if (chords.Chords.Count >= MIN_CHORDS_IN_LIST)
                     {
                         //Add the chords list
-                        ChordsJSON.AddChords(chords.title, chords.chords);
+                        ChordsJSON.AddChords(chords.Title, chords.Chords);
 
                         //Close the windows
                         this.DialogResult = DialogResult.OK;
@@ -106,13 +106,15 @@ namespace AppliAccordsMusique
         private TextBox NewChordInput(int yPos)
         {
             //Create a textbox and set this propreties
-            TextBox inputChord = new TextBox();
-            inputChord.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            inputChord.Location = new Point(12, yPos);
-            inputChord.Size = new Size(220, 26);
-            inputChord.TabIndex = 0;
-            inputChord.Text = "";
-            inputChord.TextAlign = HorizontalAlignment.Center;
+            TextBox inputChord = new TextBox
+            {
+                Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))),
+                Location = new Point(12, yPos),
+                Size = new Size(220, 26),
+                TabIndex = 0,
+                Text = "",
+                TextAlign = HorizontalAlignment.Center
+            };
 
             return inputChord;
         }

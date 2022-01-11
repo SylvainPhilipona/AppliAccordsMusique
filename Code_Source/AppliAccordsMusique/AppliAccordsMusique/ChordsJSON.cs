@@ -53,7 +53,7 @@ namespace AppliAccordsMusique
             foreach(Chord chord in GetChords())
             {
                 //If the title of the chord is equal to the title to check
-                if(chord.title == title)
+                if(chord.Title == title)
                 {
                     return true;
                 }
@@ -92,7 +92,7 @@ namespace AppliAccordsMusique
             foreach(Chord chord in list.ToList())
             {
                 //If the chord is to remove
-                if(chord.title == title) 
+                if(chord.Title == title) 
                 {
                     //Remove the chord
                     list.Remove(chord);
@@ -109,13 +109,13 @@ namespace AppliAccordsMusique
 
     public class Chord
     {
-        public string title { get; set; }
-        public List<string> chords { get; set; }
+        public string Title { get; set; }
+        public List<string> Chords { get; set; }
 
         public Chord(string title, List<string> chords)
         {
-            this.title = title;
-            this.chords = chords;
+            this.Title = title;
+            this.Chords = chords;
         }
     }
 }
