@@ -9,7 +9,7 @@ namespace AppliAccordsMusique
     {
         //Constants
 
-        private const int MAX_CHORD_INPUTS = 25;
+        private const int MAX_CHORD_INPUTS = 50;
         private const int MIN_CHORDS_IN_LIST = 2;
 
         //Variables
@@ -113,7 +113,8 @@ namespace AppliAccordsMusique
                 Size = new Size(220, 26),
                 TabIndex = 0,
                 Text = "",
-                TextAlign = HorizontalAlignment.Center
+                TextAlign = HorizontalAlignment.Center,
+                MaxLength = tbListName.MaxLength
             };
 
             return inputChord;
